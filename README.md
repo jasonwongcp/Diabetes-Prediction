@@ -17,7 +17,7 @@ The dataset was collected by The Behavioral Risk Factor Surveillance System (BRF
 
 ## 🧹 Summary of cleaning and preprocessing
 
-[Exploratory Data Analysis (EDA)](https://github.com/jasonwongcp/Diabetes-Prediction/1-EDA_and_Data_Cleaning.ipynb)
+[Exploratory Data Analysis (EDA)](Diabetes-Prediction/1-EDA_and_Data_Cleaning.ipynb)
 
 Originally there were 70,692 patients’ data in the dataset, and after preprocessing steps including removing duplicates, handling missing values and handling erroneous value, there are 64,020 patients’ data left. The table shows 17 features and the target column (Diabetes).
 
