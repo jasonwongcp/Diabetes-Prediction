@@ -32,7 +32,7 @@ The probability of diabetes does not increase when the patients consume high amo
 
 ## 📊 Insights, modeling, and results
 
-[Modeling results](1_Modeling.ipynb)
+[Modeling results](2_Modeling.ipynb)
 
 - The dataset was split into training and testing sets to train and evaluate the models.
 - Logistic Regression Modeling, KNN and Random Forest machine learning models were trained on the training set using the selected features and scaled data.
