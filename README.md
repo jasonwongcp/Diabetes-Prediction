@@ -1,32 +1,43 @@
-# Project Problem Statement
+# 🚀 Project Problem Statement 📋
 
-The rising prevalence of diabetes is posing significant challenges to healthcare systems in the U.S., leading to substantial healthcare expenditures. To address this issue and mitigate the burden on healthcare costs, the project aims to develop and deploy machine learning models that can accurately predict the risk of developing diabetes based on readily available health datasets. The objective is to identify individuals at high risk of diabetes early on, allowing for timely intervention and personalized preventive measures. By implementing practical applications of these predictive models, healthcare providers can reduce the overall cost of healthcare spent on patients with diabetes. The project seeks to leverage the power of data-driven insights to enhance healthcare decision-making and contribute to the global effort of managing and preventing diabetes effectively.
+The rising prevalence of diabetes is posing significant challenges to healthcare systems in the U.S., leading to substantial healthcare expenditures. To address this issue and mitigate the burden on healthcare costs, the project aims to develop and deploy machine learning models that can accurately predict the risk of developing diabetes based on readily available health datasets. The objective is to identify individuals at high risk of diabetes early on, allowing for timely intervention and personalized preventive measures. By implementing practical applications of these predictive models, healthcare providers can reduce the overall cost of healthcare spent on patients with diabetes. The project seeks to leverage the power of data-driven insights to enhance healthcare decision-making and contribute to the global effort of managing and preventing diabetes effectively. 🦠💻
 
-## Why Diabetes?
+## 🌟 Why diabetes? 
+In 2022, CDC estimated that there were 37 million people who have diabetes, accounting for 10% of the total population in the U.S. Notably, 20% of them, approximately 7.4 million people, do not know they have the disease . The American Diabetes Association released new research in 2018 estimating the total costs of diagnosed diabetes have risen to $327 billion in 2017 . 💡💰
 
-In 2022, the CDC estimated that there were 37 million people with diabetes, accounting for 10% of the total U.S. population. Shockingly, 20% of them—approximately 7.4 million people—remain unaware of their condition. The American Diabetes Association reported a 26% increase in the total costs of diagnosed diabetes from 2012 to 2017, reaching $327 billion in 2017. Moreover, a staggering $1 out of every $4 in U.S. healthcare costs is spent on caring for people with diabetes.
+## 🤖 Why machine learning models?
+Using machine learning models to predict the risk of developing diabetes based on patient data during their visits to medical contributes to early identification of patients and intervention of treatments, which can lead to cost savings in the long run by reducing the need for expensive treatments and hospitalizations associated with diabetes-related complications. 🤖💰
 
-## Why Machine Learning Models?
+## 💰 An estimation of how machine learning models save US health care cost 
+It is estimated that patients participating in the Diabetes Prevention Program can save US$1200/ patient /year . Assuming all the above-mentioned 7.4 million people who do not know they have diabetes go to clinics and get screened by machine learning models with an accuracy of 75%, a total of 5.6 million patients will be successfully identified. Assuming all of them participate in the Diabetes Prevention Program, a total of $6.72 billion will be saved per year in the U.S. 💰📊
 
-Using machine learning models to predict diabetes risk based on patient data during medical visits facilitates early patient identification and intervention, ultimately reducing the need for costly treatments and hospitalizations associated with diabetes-related complications.
+## 📊 Details of dataset
 
-## Machine Learning Models' Potential to Save Healthcare Costs
+The dataset was collected by The Behavioral Risk Factor Surveillance System (BRFSS) under the Centers for Disease Control and Prevention. BRFSS is a system of telephone surveys that collect data about U.S. residents regarding their chronic health conditions. 📊📞
 
-If all the 7.4 million people unaware of their diabetes risk were screened with machine learning models, assuming an accuracy of 75%, it could save $6.72 billion annually in the U.S.
+## 🧹 Summary of cleaning and preprocessing
+[Exploratory Data Analysis (EDA)](1- EDA_and_Data_Cleaning.ipynb)
+Originally there were 70,692 patients’ data in the dataset, and after preprocessing steps including removing duplicates, handling missing values and handling erroneous value, there are 64,020 patients’ data left. The table shows 17 features and the target column (Diabetes).
 
-## Details of the Dataset
+The features can be divided into physical and behavioral features. Examples of physical features are high cholesterol and high blood pressure. Behavioral features are heavy alcohol consumption and smoker.
 
-The dataset was collected by The Behavioral Risk Factor Surveillance System (BRFSS) under the Centers for Disease Control and Prevention.
+The target distribution, Diabetes, is approximately split evenly. This balance is desirable in machine learning applications because an imbalanced target distribution, where one class significantly outweighs the other, can lead to biased predictions and affect the model's performance.
 
-## Summary of Cleaning and Preprocessing
+## 📈 Let’s take a look at physical features
+The probability of diabetes is significantly higher for patients with high cholesterol and high blood pressure, suggesting these two are important contributing factors to the development of diabetes. 
 
-After preprocessing, 64,020 patients' data were retained from an initial 70,692. The dataset includes 17 features and the target column (Diabetes).
+The probability of diabetes does not increase when the patients consume high amounts of alcohol or are smokers, suggesting that high intake of alcohol or smoking does not increase the risks of diabetes development. 📈🚭
 
-## Insights, Modeling, and Results
+## 📊 Insights, modeling, and results
+•	The dataset was split into training and testing sets to train and evaluate the models.
+•	Logistic Regression Modeling, KNN and Random Forest machine learning models were trained on the training set using the selected features and scaled data.
+•	Hyperparameter tuning was performed using grid search to optimize model performance.
+•	Model performance was evaluated on the testing set using various metrics, such as accuracy, precision, recall, and F1-score to assess the models' predictive capabilities. Results are summarized in the table below. 📊📈
 
-- The dataset was split into training and testing sets.
-- Logistic Regression, KNN, and Random Forest models were trained and optimized.
-- Model performance metrics were evaluated and summarized in the table below.
+All three models have similar accuracy levels, ranging from 0.73 to 0.75, indicating that they are making correct predictions for approximately 73% to 75% of the instances.
+
+The recall for non-diabetes is highest for the logistic regression model (0.72), followed closely by KNN (0.69) and Random Forest (0.68). Recall is particularly important in medical contexts, as it represents the ability to correctly identify true non-diabetic cases out of all the actual non-diabetic cases.
+
 
 | Model            | Accuracy | Recall (non-diabetes) |
 |------------------|----------|-----------------------|
@@ -34,13 +45,16 @@ After preprocessing, 64,020 patients' data were retained from an initial 70,692.
 | KNN              | 0.74     | 0.69                  |
 | Random Forest    | 0.75     | 0.68                  |
 
-## Findings and Conclusions
+## 📑 Findings and conclusions
 
-### Limitations of the Dataset
+Limitations of the dataset 
+•	The dataset does not separate Type I and II diabetes
+•	The dataset does not contain family history or races of patients, which are important factors for Type I diabetes
 
-- The dataset does not distinguish between Type I and II diabetes.
-- Family history and patient races, essential factors for Type I diabetes, are missing.
+## ✅ Achieved the goal of developing machine learning models
+The project's primary goal was to develop machine learning models capable of predicting the risk of developing diabetes based on patient data during medical visits. The logistic regression, KNN, and Random Forest models achieved this goal by providing predictions with relatively high accuracy (75%) and acceptable recall for non-diabetes cases.
 
-### Achieved Goals and Practical Application
+## 💉 Practical application: Healthcare Cost Reduction
+Proactive management of diabetes risk can potentially lead to reduced healthcare costs by preventing or delaying diabetes-related complications that require costly treatments and hospitalizations. As previously described, a machine learning model with an accuracy of 75% could potentially save $6.72 per year in the U.S. 💉🏥
 
-The project successfully developed machine learning models to predict diabetes risk. These models achieved high accuracy (75%) and reasonable recall for non-diabetes cases. Proactively managing diabetes risk can lead to substantial healthcare cost savings, potentially saving billions annually in the U.S.
+
