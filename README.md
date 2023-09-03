@@ -16,7 +16,9 @@ It is estimated that patients participating in the Diabetes Prevention Program c
 The dataset was collected by The Behavioral Risk Factor Surveillance System (BRFSS) under the Centers for Disease Control and Prevention. BRFSS is a system of telephone surveys that collect data about U.S. residents regarding their chronic health conditions. 📊📞
 
 ## 🧹 Summary of cleaning and preprocessing
+
 [Exploratory Data Analysis (EDA)](1- EDA_and_Data_Cleaning.ipynb)
+
 Originally there were 70,692 patients’ data in the dataset, and after preprocessing steps including removing duplicates, handling missing values and handling erroneous value, there are 64,020 patients’ data left. The table shows 17 features and the target column (Diabetes).
 
 The features can be divided into physical and behavioral features. Examples of physical features are high cholesterol and high blood pressure. Behavioral features are heavy alcohol consumption and smoker.
