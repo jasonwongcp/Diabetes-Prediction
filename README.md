@@ -1,4 +1,4 @@
-# 🚀 Prediction of diabetes using machine learning models 📋
+# 🚀 Diabetes risk prediction using machine learning approaches 📋
 
 The rising prevalence of diabetes is posing significant challenges to healthcare systems in the U.S., leading to substantial healthcare expenditures. To address this issue and mitigate the burden on healthcare costs, the project aims to develop and deploy machine learning models that can accurately predict the risk of developing diabetes based on readily available health datasets. The objective is to identify individuals at high risk of diabetes early on, allowing for timely intervention and personalized preventive measures. By implementing practical applications of these predictive models, healthcare providers can reduce the overall cost of healthcare spent on patients with diabetes. The project seeks to leverage the power of data-driven insights to enhance healthcare decision-making and contribute to the global effort of managing and preventing diabetes effectively. 🦠💻
 
